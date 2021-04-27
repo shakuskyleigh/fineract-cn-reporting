@@ -39,6 +39,7 @@ repositories {
     jcenter()
     mavenLocal()
     maven { url 'https://mifos.jfrog.io/mifos/libs-snapshot/' }
+    maven { url 'https://mvnrepository.com/artifact/org.postgresql/postgresql' }
 }
 
 dependencyManagement {
@@ -58,6 +59,7 @@ dependencies {
     compile(
             [group: 'com.google.code.findbugs', name: 'jsr305'],
             [group: 'org.apache.fineract.cn', name: 'postgresql', version: versions.frameworkpostgresql]
+            [group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4']
     )
 
     testCompile(
